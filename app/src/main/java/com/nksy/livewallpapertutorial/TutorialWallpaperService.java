@@ -68,7 +68,7 @@ public class TutorialWallpaperService extends WallpaperService {
                 canvas = surfaceHolder.lockCanvas();
                 if (canvas != null) {
                     Log.d("drawFrame", "Drawing Something!");
-                    canvas.drawColor(Color.RED);
+                    canvas.drawColor(Color.BLUE);
                     drawCircle(canvas);
                 }
             } finally {
