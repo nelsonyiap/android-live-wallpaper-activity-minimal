@@ -29,11 +29,18 @@
             android:layout_height="118dp" />
 
         <Button
-            android:id="@+id/liveWallpaper"
+            android:id="@+id/touchWallpaper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Set Live Wallpaper"
-            android:onClick="set_live_wallpaper"/>
+            android:onClick="set_touch_wallpaper"
+            android:text="Set Touch Wallpaper" />
+
+        <Button
+            android:id="@+id/gifWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="set_gif_wallpaper"
+            android:text="Set GIF Wallpaper" />
 
     </LinearLayout>
 

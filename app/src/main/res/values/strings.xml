@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">Live Wallpaper Set by Activity</string>
-    <string name="title_activity_main">Live Wallpaper Activity</string>
+    <string name="app_name">Live Wallpapers Demo</string>
+    <string name="gif_wallpaper">GIF Wallpaper</string>
+    <string name="touch_wallpaper">Touch Wallpaper</string>
 </resources>

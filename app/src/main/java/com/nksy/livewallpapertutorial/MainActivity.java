@@ -5,8 +5,6 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -36,11 +34,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void set_live_wallpaper(View view) {
-        Log.d("Live Wallpaper", "Attempting to set");
+    public void set_touch_wallpaper(View view) {
+        Log.d("MainActivity", "Attempting to set touch wallpaper");
         final Intent intent = new Intent(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
         intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
-                new ComponentName(MainActivity.this, TutorialWallpaperService.class));
+                new ComponentName(MainActivity.this, TouchWallpaperService.class));
         startActivity(intent);
     }
+
+    public void set_gif_wallpaper(View view) {
+        Log.d("MainActivity", "Attempting to set gif wallpaper");
+        final Intent intent = new Intent(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
+        intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
+                new ComponentName(MainActivity.this, GIFWallpaperService.class));
+        startActivity(intent);
+    }
+
 }

@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 
-public class TutorialWallpaperService extends WallpaperService {
+public class TouchWallpaperService extends WallpaperService {
 
     private static final long TOUCH_DURATION = 1000;
     private static final long FRAME_RATE = (long)(1/60f * 1000);
@@ -21,10 +21,10 @@ public class TutorialWallpaperService extends WallpaperService {
 
     @Override
     public Engine onCreateEngine() {
-        return new TutorialWallpaperEngine();
+        return new TouchWallpaperEngine();
     }
 
-    private class TutorialWallpaperEngine extends WallpaperService.Engine {
+    private class TouchWallpaperEngine extends WallpaperService.Engine {
 
         private final Runnable mDraw = new Runnable() {
             @Override
@@ -33,7 +33,7 @@ public class TutorialWallpaperService extends WallpaperService {
             }
         };
 
-        public TutorialWallpaperEngine() {
+        public TouchWallpaperEngine() {
 
         }
 

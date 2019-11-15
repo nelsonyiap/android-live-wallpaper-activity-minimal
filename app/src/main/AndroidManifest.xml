@@ -19,7 +19,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,9 +29,9 @@
         </activity>
 
         <service
-            android:name=".TutorialWallpaperService"
+            android:name=".TouchWallpaperService"
             android:enabled="true"
-            android:label="Circle Live Wallpaper"
+            android:label="@string/touch_wallpaper"
             android:permission="android.permission.BIND_WALLPAPER">
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
@@ -39,9 +39,25 @@
 
             <meta-data
                 android:name="android.service.wallpaper"
-                android:resource="@xml/wallpaper">
+                android:resource="@xml/touch_wallpaper">
             </meta-data>
         </service>
+
+        <service
+            android:name=".GIFWallpaperService"
+            android:enabled="true"
+            android:label="@string/gif_wallpaper"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/gif_wallpaper">
+            </meta-data>
+        </service>
+
     </application>
 
 </manifest>
